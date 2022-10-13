@@ -1,0 +1,26 @@
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $light;
+  text-align: right;
+  padding: 10px 50px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  &__button {
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    background-color: $sucess;
+    color: $light;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $sucess-light;
+    }
+  }
+}

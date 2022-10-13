@@ -1,0 +1,50 @@
+.button-wrapper {
+	margin-top: 35px;
+	color: $light;
+	display: flex;
+	justify-content: space-between;
+}
+
+.button {
+	border: none;
+	font-size: 17px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-radius: 6px;
+	padding: 0 35px;
+	background-color: $primary;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	@include size(100%, 100%);
+	color: $light;
+
+	&:hover {
+		background-color: $secondary;
+	}
+  &--link{
+    padding: 10px 20px;
+  }
+	&--success {
+		background: $sucess;
+
+		&:hover {
+			background-color: $sucess-light;
+		}
+	}
+
+	&--danger {
+		background: $error;
+
+		&:hover {
+			background-color: $errordark;
+		}
+	}
+
+	&--warning {
+		background: $warining;
+
+		&:hover {
+			background-color: $wariningbright;
+		}
+	}
+}

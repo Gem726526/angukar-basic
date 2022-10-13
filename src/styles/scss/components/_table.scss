@@ -1,0 +1,79 @@
+.table-container {
+  background: $light;
+  height: 100vh;
+  margin-left: 200px;
+}
+
+.table {
+  width: 100%;
+  background: $light;
+  margin-top: 0;
+  font-size: 20px;
+  border-spacing: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 7px;
+
+  &__body {
+      border-radius: 5px;
+  }
+
+  &__head {
+      font-weight: lighter;
+      padding: 7px;
+      margin: 0;
+      text-transform: capitalize;
+      background-color: $primary;
+      color: $light;
+
+
+  }
+
+  &__row {
+
+
+      &:nth-child(odd) {
+          background-color: $light;
+          color: $dark;
+      }
+
+      &:nth-child(even) {
+          background-color: $grey;
+          color: $dark;
+      }
+
+      &:hover {
+          transform: scaleY(1.1);
+          background: $primary-soft;
+          color: $light;
+
+          .edit-icon {
+              color: $light;
+          }
+
+      }
+
+      &--noscale {
+          &:hover {
+              transform: none;
+          }
+      }
+  }
+
+
+  &__data {
+      padding: 5px;
+      text-align: center;
+      border-bottom: 1px solid $primary-light;
+      text-transform: capitalize;
+      font-size: 18px;
+
+
+  }
+  .edit-icon{
+    color: $primary;
+    cursor: pointer;
+  }
+  .trash-icon{
+    color: $errordark;
+    cursor: pointer;
+  }
+}
