@@ -1,31 +1,37 @@
-<app-nav></app-nav>
-<section class=" main-content table-container ">
-  <div class="page-header">
-    <h1 class="page-header__title">Admin Table</h1>
-    <button class="page-header__button" (click) ="addUserButton()">
-      Add User</button>
-  </div>
-  <table class="table" id="user-table">
-    <thead class="head">
-      <tr class="table__row table__row--noscale">
-        <th class="table__head ">ID</th>
-        <th class="table__head ">name</th>
-        <th class="table__head ">email</th>
-        <th class="table__head ">edit</th>
-        <th class="table__head ">delete</th>
-      </tr>
-    </thead>
-    <tbody class="table__body">
-      <!--table row goes here -->
-      <tr *ngFor="let user of users, let i =index">
-        <td class="table__data">{{i + 1}}</td>
-        <td class="table__data">{{user.name}}</td>
-        <td class="table__data">{{user.email}}</td>
-        <td class="table__data edit__btn" > <i class=" uil-edit edit-icon" (click)="editUserButton(i)"></i></td>
-        <td class="table__data delete__btn"> <i class=" uil-trash trash-icon" (click)="deleteUserButton(i)"></i></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+<div class="body-conatiner">
 
+  <app-nav></app-nav>
+  <section class=" main-content table-container ">
+    <div class="page-header">
+      <h1 class="page-header__title">Admin Table</h1>
+      <button class="page-header__button" (click)="addUserButton()">
+        <i class="fa fa-solid fa-user-plus"></i> Add User
+      </button>
+    </div>
+    <table class="table" id="user-table">
+      <thead class="head">
+        <tr class="table__row table__row">
+          <th class="table__head ">ID</th>
+          <th class="table__head ">name</th>
+          <th class="table__head ">email</th>
+          <th class="table__head ">edit</th>
+          <th class="table__head ">delete</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <!--table row goes here -->
+        <tr class="table__row" *ngFor="let user of users, let i =index">
+          <td class="table__data">{{i + 1}}</td>
+          <td class="table__data">{{user.name}}</td>
+          <td class="table__data">{{user.email}}</td>
 
+          <td class="table__data edit__btn"> <i class="fas fa-light fa-user-pen edit-icon"
+              (click)="editUserButton(i)"></i>
+          </td>
+          <td class="table__data delete__btn"> <i class=" fa-solid fa-user-slash trash-icon"
+              (click)="deleteUserButton(i)"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

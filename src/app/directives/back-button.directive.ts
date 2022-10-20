@@ -5,11 +5,10 @@ import { NavigationService } from '../services/router-back.services'
   selector: '[backButton]',
 })
 export class BackButtonDirective {
-  constructor(private navigation: NavigationService) {}
+  constructor(private navigation: NavigationService) { }
 
   @HostListener('click')
   onClick(): void {
     this.navigation.back()
-    console.log('back directive caLLED')
   }
 }

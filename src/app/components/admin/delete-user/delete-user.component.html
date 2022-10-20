@@ -1,6 +1,13 @@
-<h1 class="form__title">Delete User</h1>
-<div class="input button-wrapper">
-  <button  class="button button--danger" (click)="deleteUser()">Delete
-      User</button>
-  <button backButton  class="button button--warning" value="cancel" type ='reset' >Cancel</button>
-</div>
+<app-nav></app-nav>
+<section class="form-popup">
+  <div class="delete-form-warpper">
+    <div class="delete-form-content">
+      <h1 class="form__title">Delete User</h1>
+      <div class="button-wrapper button-wrapper-delete">
+        <button class="button button--danger" (click)="deleteUser()">Delete
+          User</button>
+        <button (click)="goToAdmin()" class="button button--success" value="cancel" type='reset'>Cancel</button>
+      </div>
+    </div>
+  </div>
+</section>

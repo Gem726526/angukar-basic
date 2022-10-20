@@ -1,29 +1,31 @@
-<div class="form-container">
-  <div class="form login">
-    <h1 class="form__title">Login</h1>
+<div class="form-wrapper">
+  <div class="form-container">
+    <div class="form login">
+      <h1 class="form__title">Login</h1>
 
-    <form id="login-form"  #LoginForm='ngForm' (ngSubmit)="onSubmit()">
-      <div class="input">
-        <input class="input__field  " type="email" placeholder="Enter your email" #loginEmail='ngModel' ngModel
-          name="email" required ngModel email>
-        <span *ngIf='!loginEmail.valid && loginEmail.touched' class="error">
-          <span *ngIf="loginEmail.errors['required']"> Email cannot be empty</span>
-          <span *ngIf="loginEmail.errors['email']"> Please provide valid Email.</span>
-        </span>
-      </div>
-      <div class="input">
-        <input class="input__field password  password-text" id="login-password" type="password"
-          placeholder="Enter your password" #password = 'ngModel'  required minlength="5" ngModel name="password">
+      <form id="login-form" #LoginForm='ngForm' (ngSubmit)="onSubmit()">
+        <div class="input">
+          <input class="input__field " type="email" placeholder="Enter your email" #loginEmail='ngModel' ngModel
+            name="email" required ngModel email>
+          <span *ngIf='!loginEmail.valid && loginEmail.touched' class="error">
+            <span *ngIf="loginEmail.errors['required']"> Email cannot be empty</span>
+            <span *ngIf="loginEmail.errors['email']"> Please provide valid Email.</span>
+          </span>
+        </div>
+        <div class="input">
+          <input class="input__field password  password-text" id="login-password" type="password"
+            placeholder="Enter your password" #password='ngModel' required minlength="5" ngModel name="password">
           <span *ngIf='!password.valid && password.touched' class="error">
             <span *ngIf="password.errors['required']"> Password cannot be empty</span>
             <span *ngIf="password.hasError('minlength')"> Password cannot less than 5 characters</span>
-            </span>
-      </div>
+          </span>
+        </div>
 
 
-      <div class="input button-wrapper">
-        <button [disabled]="!LoginForm.valid" type="submit" class="button">Login</button>
-        <button type="reset" class="button">Cancel</button>
-      </div>
-    </form>
+        <div class="input button-wrapper">
+          <button [disabled]="!LoginForm.valid" type="submit" class="button">Login</button>
+          <button backButton type="reset" class="button button--danger ">Cancel</button>
+        </div>
+      </form>
+    </div>
   </div>

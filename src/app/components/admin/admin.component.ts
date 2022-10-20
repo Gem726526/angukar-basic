@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormControl, FormGroup } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService } from "src/app/services/user.services";
 
@@ -9,8 +9,8 @@ import { UserService } from "src/app/services/user.services";
 })
 export class AdminComponent implements OnInit {
   addUserForm: FormGroup;
-  users:any= []
-  constructor( private router : Router, private userList : UserService) {
+  users: any = []
+  constructor(private router: Router, private userList: UserService) {
 
   }
   ngOnInit() {
@@ -23,19 +23,20 @@ export class AdminComponent implements OnInit {
   get email() {
     return this.addUserForm.get('email') as FormControl;
   }
-  addUserButton(){
-    this.router.navigate(['/addUser']);
+  addUserButton() {
+    console.log('hello')
+    this.router.navigate(['admin/addUser']);
   }
-  editUserButton(index:number){
+  editUserButton(index: number) {
 
-    console.log(this.users[index].name)
-    this.router.navigate(['/editUser', index+1]);
+
+    this.router.navigate(['admin/editUser', index + 1]);
 
   }
-  deleteUserButton(index:number){
+  deleteUserButton(index: number) {
 
-    console.log(this.users[index].name)
-    this.router.navigate(['/deleteUser', index+1]);
+
+    this.router.navigate(['admin/deleteUser', index + 1]);
 
   }
 

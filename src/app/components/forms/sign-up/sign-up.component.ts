@@ -10,10 +10,10 @@ import { NavigationService } from 'src/app/services/router-back.services';
 export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
 
-  constructor(private router :Router,
-    private navigate :NavigationService) {
+  constructor(private router: Router,
+  ) {
 
-    }
+  }
 
   ngOnInit() {
     this.signUpForm = new FormGroup(
@@ -46,11 +46,14 @@ export class SignUpComponent implements OnInit {
     return this.signUpForm.get('confirmPassword') as FormControl;
   }
 
+  formSubmit() {
+    if (!this.signUpForm.valid) { alert('Please enter valid data') }
 
+  }
   onSubmit() {
-    this.router.navigate(['/admin'])
+    this.router.navigate(['/dashboard'])
   }
-  }
+}
 
 
 

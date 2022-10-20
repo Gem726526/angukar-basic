@@ -1,0 +1,86 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card__content">
+      <div class="card__left">
+        <div class="card__icon card__icon--primary">
+          <i class=" fa  fa-users  "></i>
+        </div>
+        <div class="card__content-heading">
+          <p class="card__content-description"> Total Users </p>
+        </div>
+        <p class="card__content-text"> {{this.totalUsers}} Users </p>
+      </div>
+      <div class="card__right">
+        <div class="card__graph">
+          <img src="../../../../assets/images/Growth.png" alt="">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="card ">
+    <div class="card__content">
+      <div class="card__left">
+        <div class="card__icon card__icon--secondary">
+          <i class="fa-solid fa-person-arrow-up-from-line "></i>
+        </div>
+        <div class="card__content-heading">
+          <p class="card__content-description"> Top User </p>
+        </div>
+        <p class="card__content-text" *ngFor="let user of topUsers; let i = index ; ">
+          <span *ngIf="i<1">
+            {{user.name}}
+          </span>
+        </p>
+      </div>
+      <div class="card__right">
+        <div class="card__graph">
+          <img src="../../../../assets/images/Growth.png" alt="">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="card ">
+    <div class="card__content">
+      <div class="card__left">
+        <div class="card__icon">
+          <i class="fa fa-solid fa-envelope card__icon "></i>
+        </div>
+        <div class="card__content-heading">
+          <p class="card__content-description"> Place Ads here </p>
+        </div>
+        <p class="card__content-text">
+          New AD
+        </p>
+      </div>
+      <div class="card__right">
+        <div class="card__graph">
+          <img src="../../../../assets/images/Growth.png" alt="">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="card card--user">
+    <div class="card__content">
+      <div class="card__left">
+        <div class="card__icon card__icon--primary">
+          <i class=" fa  fa-users  "></i>
+        </div>
+        <div class="card__content-heading">
+          <p class="card__content-description"> Total Users </p>
+        </div>
+        <p class="card__content-text"> {{this.totalUsers}} Users </p>
+      </div>
+      <div class="card__right">
+        <div class="card__graph">
+          <img src="../../../../assets/images/Growth.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

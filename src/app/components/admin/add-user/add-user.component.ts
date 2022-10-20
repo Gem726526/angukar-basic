@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { User } from "src/app/interfaces/interface";
+
 
 @Component({
   selector: 'app-add-user',
@@ -28,13 +30,13 @@ export class AddUserComponent implements OnInit {
     return this.addUserForm.get('email') as FormControl;
   }
   onSubmit() {
-    console.log(this.addUserForm)
     console.log(this.addUserForm.value)
     this.user = Object.assign(this.user, this.addUserForm.value);
+    console.log(this.user)
     this.addUser(this.user)
     this.router.navigate(['/admin']);
   }
-  addUser(user) {
+  addUser(user: User) {
     let users = [];
     if (localStorage.getItem('Users')) {
       users = JSON.parse(localStorage.getItem('Users'));

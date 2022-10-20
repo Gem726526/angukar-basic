@@ -6,13 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './log-in.component.html'
 })
 export class LogInComponent implements OnInit {
-  @ViewChild('LoginForm') loginForm : NgForm;
-  constructor( private router :Router ) { }
+  @ViewChild('LoginForm') loginForm: NgForm;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-  onSubmit(){
-    this.router.navigate(['/admin'])
+  onSubmit() {
+    this.loginForm.validator
+    this.router.navigate(['/dashboard'])
   }
 
 

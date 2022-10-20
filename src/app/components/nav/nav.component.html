@@ -1,22 +1,49 @@
 <div class="nav">
-  <ul class="nav__list">
-    <li class="nav__list-items">
-      <a class="nav__list-link">
-        <i class="uil uil-airplay icon"></i>
-        <span class="nav__list-text">
-          Dashboard
-        </span>
-      </a>
-    </li>
+  <div class="nav__container">
+    <div class="nav__header">
+      <div class="nav__logo">
+        <img src="../../../assets/images/Nav_logo.png" alt="" srcset="">
+      </div>
+      <div class="nav__title">ANGULAR</div>
 
+    </div>
+    <ul class="nav__list">
+      <li class="nav__list-items" [routerLink]='["/dashboard"]' routerLinkActive="nav__list-items-active">
+        <a class="nav__list-link">
+          <i class="fa-solid fa-laptop icon"></i>
+          <span class="nav__list-text">
+            Dashboard
+          </span>
+          <i class="fa-solid fa-circle dot-icon"></i>
+        </a>
+      </li>
 
-    <li class="nav__list-items">
-      <a class="nav__list-link">
-        <i class="uil uil-user-circle icon"></i>
-        <span class="nav__list-text">
-          Admin
-        </span>
-      </a>
-    </li>
-  </ul>
+      <li class="nav__list-items" routerLink="/admin" routerLinkActive="nav__list-items-active">
+        <a class="nav__list-link">
+          <i class="fa-solid fa-user-tie icon"></i>
+          <span class="nav__list-text">
+            Admin
+          </span>
+          <i class="fa-solid fa-circle dot-icon"></i>
+        </a>
+      </li>
+      <li class="nav__list-items" routerLink="/signout" routerLinkActive="nav__list-items-active">
+        <a class="nav__list-link">
+
+          <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+          <span class="nav__list-text">
+            Sign Out
+          </span>
+          <i class="fa-solid fa-circle dot-icon"></i>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav__bottom bottom">
+      <i class="fa-solid fa-shield bottom__icon"></i>
+      <p class="bottom__text bottom__text--large"> Keep you safe</p>
+      <p class="bottom__text bottom__text--small">Upgrade Security!</p>
+      <p class="bottom__text bottom__text--large">Update Privacy</p>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,13 @@
+<app-nav></app-nav>
+<section class="form-popup">
+  <div class="delete-form-warpper">
+    <div class="delete-form-content">
+      <h1 class="form__title">Do you want to Signout?</h1>
+      <div class="button-wrapper button-wrapper-delete">
+        <button class="button button--danger" (click)="signOutUser()">Sign Out
+          User</button>
+        <button (click)="goToAdmin()" class="button button--success" value="cancel" type='reset'>Cancel</button>
+      </div>
+    </div>
+  </div>
+</section>

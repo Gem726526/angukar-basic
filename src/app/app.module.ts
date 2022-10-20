@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
-import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AdminComponent } from './components/admin/admin.component';
 import { RoutePaths } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseComponent } from './components/base/base.component';
 import { LogInComponent } from './components/forms/log-in/log-in.component';
 import { SignUpComponent } from './components/forms/sign-up/sign-up.component';
-import { NavComponent } from './components/nav/nav.component';
-import { AdminModule } from './components/admin/admin.module';
 import { NavigationService } from './services/router-back.services';
-import { BackButtonDirective } from './directives/back-button.directive';
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './components/dashboard/dashboard.module';
+import { SignOutUserComponent } from './components/signout/signout.component.';
+
+
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import { BackButtonDirective } from './directives/back-button.directive';
 
     SignUpComponent,
     LogInComponent,
+    SignOutUserComponent,
 
 
     BaseComponent,
 
-    AdminComponent,
-    NavComponent,
-    BackButtonDirective
+
+
+
+
 
   ],
   imports: [
@@ -33,8 +36,14 @@ import { BackButtonDirective } from './directives/back-button.directive';
     RoutePaths,
     FormsModule,
     ReactiveFormsModule,
-    AdminModule,
 
+    SharedModule,
+    DashboardModule,
+
+
+
+  ],
+  exports: [
 
   ],
   providers: [NavigationService],
