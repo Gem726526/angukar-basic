@@ -1,1 +1,6 @@
-@import './base-component', './delete_user_form', './form-wrapper', './dashboard-component';
+@import "./base-component", "./delete_user_form", "./form-wrapper", "./dashboard-component";
+
+html {
+    margin: 0;
+    padding: 0;
+}
