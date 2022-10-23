@@ -3,9 +3,9 @@
   display: grid;
   transition: height 0.2s ease;
   place-items: center;
-  height: 100vh;
+  height: calc(100vh);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
+  margin-top: -24px;
 
   .form {
     width: 410px;
@@ -67,7 +67,7 @@
 }
 
 .form-popup {
-  width: calc(100% - 255px);
+  width: calc(100% - 270px);
   margin-left: 270px;
 
 }
