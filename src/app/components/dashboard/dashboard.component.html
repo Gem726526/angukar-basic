@@ -21,8 +21,42 @@
 
 
     </div>
-    <div class="dashboard__table">
-      Top Users
+    <div class="dashboard__table-section">
+
+      <table class="dashboard__table topuser-table">
+        <p class="dashboard__table-heading">Top Users</p>
+        <tbody class="topuser-table__body" *ngFor="let user of topUsers; let i = index ; ">
+          <tr class="topuser-table__row" *ngIf="i<3">
+
+
+            <td class="topuser-table__data"> <i class="fa-solid fa-user-tie icon "></i> User Rank: {{i+1}}</td>
+            <td class="topuser-table__data"> {{user.name}}</td>
+            <td class="topuser-table__data"> {{user.email}}</td>
+            <td class="topuser-table__data user-type-table" *ngIf="i==1; else premimumText">
+              General</td>
+            <ng-template #premimumText>
+              <td class="topuser-table__data user-type-table ">
+                Premium</td>
+            </ng-template>
+
+          </tr>
+        </tbody>
+      </table>
+      <div class="dashboard__table-section-card">
+        <p class="dashboard__table-section-card-title">Team</p>
+        <div class="dashboard__table-section-card-content dashboard__table-section-card-content--primary ">
+          <i class="fa-solid fa-crown  dashboard__table-section-card-content-icon"></i>
+          <p> Total Admin <br>
+            6
+          </p>
+        </div>
+        <div class="dashboard__table-section-card-content dashboard__table-section-card-content--secondary">
+          <i class=" fas fa-regular fa-users dashboard__table-section-card-content-icon"></i>
+          <p> All Member <br>
+            15
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

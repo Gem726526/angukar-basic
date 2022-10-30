@@ -6,7 +6,10 @@ import { Chart, registerables } from "chart.js";
 
 @Component({
   selector: 'app-chart',
-  templateUrl: './chart.component.html'
+  templateUrl: './chart.component.html',
+  host: {
+    class: 'chart-wrapper'
+  }
 
 })
 
@@ -25,7 +28,6 @@ export class ChartComponent implements OnInit {
   }
   chartData() {
     this.userData = this.userList.getUsers()
-    console.log(this.xLabel)
     this.userData.forEach((User, i) => {
       this.xLabel.push(this.userData[i].name);
       this.yLabel.push(i + 1);
@@ -85,7 +87,6 @@ export class ChartComponent implements OnInit {
 
   }
   chartDisplay() {
-    console.log(this.chartDatas.xLabel)
     this.chartMaker('bar-chart', "bar")
   }
 

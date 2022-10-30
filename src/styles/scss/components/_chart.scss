@@ -4,12 +4,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px 0;
+  width: 100%;
 
 
   &__canvas {
-    padding: 0 35px;
-    min-height: 300px;
+    padding: 0 25px;
+    min-height: 310px;
+
 
   }
 }

@@ -19,7 +19,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.totalUsers = this.userList.getUsers().length
     this.topUsers = this.userList.getUsers()
-    console.log(this.totalUsers)
+
   }
 
 }
